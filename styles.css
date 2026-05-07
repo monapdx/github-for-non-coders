@@ -376,8 +376,43 @@ small {
 /* Make CMS-generated article content flow like nb-stack */
 .blog-post article > * + * {
   margin-top: var(--nb-space-4);
+  
+}
+/* Blog post images: chunky neo-brutalist frame */
+.blog-post img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: var(--nb-space-8) auto;
+  background: var(--nb-white);
+  border: var(--nb-border);
+  box-shadow: var(--nb-shadow-lg);
 }
 
+/* Keep long URLs/text from overflowing the blog post */
+.blog-post,
+.blog-post article,
+.blog-post p,
+.blog-post a,
+.blog-post li,
+.blog-post code {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Long links should wrap instead of blasting through the border */
+.blog-post a {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* Prevent code blocks from breaking the layout */
+.blog-post pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
 /* Override global uppercase heading style inside blog posts */
 .blog-post h1,
 .blog-post h2,
