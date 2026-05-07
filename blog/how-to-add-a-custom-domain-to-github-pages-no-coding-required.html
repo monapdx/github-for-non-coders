@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Add a Custom Domain to GitHub Pages (No Coding Required)</title>
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+     <!-- NAV -->
+    <nav class="nb-nav">
+      <div class="nb-nav-inner">
+        <div class="nb-nav-group">
+          <div class="nb-logo-stack">
+            <div class="nb-logo-top">GITHUB FOR</div>
+            <div class="nb-logo-bottom">NON-CODERS</div>
+          </div>
+        </div>
+
+        <div class="nb-nav-group">
+          <a href="../index.html" class="nb-btn">Home</a>
+          <a href="#buttons" class="nb-btn">About</a>
+          <a href="../blog/" class="nb-btn nb-btn-pink">Blog</a>
+
+          <a href="#alerts" class="nb-btn">Contact</a>
+        </div>
+      </div>
+    </nav>
+  <main class="blog-post">
+    <h1>How to Add a Custom Domain to GitHub Pages (No Coding Required)</h1>
+    <article>
+      <p>In this short tutorial, we will be going step-by-step through the process of how to use a <strong>custom domain</strong> you've purchased (like mywebsite.com) for a site you are hosting on <strong>Github Pages</strong>.</p><p><br>Assuming you have already purchased a domain through a registrar like <strong>GoDaddy</strong> or <strong>Namecheap</strong>, all you have to do is add a couple key pieces of information both in your account with the registrar and Github.</p><p></p><ol><li><p>So, for example, if you used <strong>Namecheap</strong> to purchase your domain, you’d login to your account there and look for <strong>Advanced DNS</strong> after clicking on the domain you want to host with Github Pages.</p></li><li><p>Once you’re there, you will need to add two different types of <strong>DNS records</strong>.&nbsp;</p></li><li><p>First, you will need to create four <strong>A records</strong> pointing to Github’s servers.</p></li></ol><p></p><table class="blog-table" style="min-width: 543px;"><colgroup><col style="min-width: 25px;"><col style="width: 518px;"></colgroup><tbody><tr><td colspan="1" rowspan="1"><p><strong>Host</strong></p></td><td colspan="1" rowspan="1" colwidth="518"><p><strong>Value</strong></p></td></tr><tr><td colspan="1" rowspan="1"><p><strong>@</strong></p></td><td colspan="1" rowspan="1" colwidth="518"><p><strong>185.199.108.153</strong></p></td></tr><tr><td colspan="1" rowspan="1"><p><strong>@</strong></p></td><td colspan="1" rowspan="1" colwidth="518"><p><strong>185.199.109.153</strong></p></td></tr><tr><td colspan="1" rowspan="1"><p><strong>@</strong></p></td><td colspan="1" rowspan="1" colwidth="518"><p><strong>185.199.110.153</strong></p></td></tr><tr><td colspan="1" rowspan="1"><p><strong>@</strong></p></td><td colspan="1" rowspan="1" colwidth="518"><p><strong>185.199.111.153</strong></p></td></tr></tbody></table><p></p><p><strong>+Add new record —&gt; A record —&gt; Host: @ Value: 185.199.108.153</strong></p><p></p><table class="blog-table" style="min-width: 543px;"><colgroup><col style="min-width: 25px;"><col style="width: 518px;"></colgroup><tbody><tr><td colspan="1" rowspan="1"><p><strong>Host</strong></p></td><td colspan="1" rowspan="1" colwidth="518"><p><strong>Value</strong></p></td></tr><tr><td colspan="1" rowspan="1"><p><strong>www</strong></p></td><td colspan="1" rowspan="1" colwidth="518"><p><a target="_blank" rel="noopener noreferrer nofollow" href="http://username.github.io"><strong>username.github.io</strong></a><strong>.</strong></p></td></tr></tbody></table><p></p><ol start="4"><li><p>The other type of DNS record you need to add is a <strong>CNAME Record</strong>.</p></li><li><p>+Add new record —&gt; CNAME record —&gt; Host: <strong>www</strong> Value: <a target="_blank" rel="noopener noreferrer nofollow" href="http://username.github.io"><strong><u>username.github.io</u></strong></a></p></li></ol><p></p><p>These records tell your domain where your website actually lives (in this case, GitHub’s servers).</p><p></p><p>By adding both these types of <strong>DNS records, you</strong> ensure that both <a target="_blank" rel="noopener noreferrer nofollow" href="http://yourdomain.com"><u>yourdomain.com</u></a> and <a target="_blank" rel="noopener noreferrer nofollow" href="http://www.yourdomain.com"><u>www.yourdomain.com</u></a> direct visitors to your actual website on <strong>Github Pages</strong>.</p><p></p><p><strong>GitHub supports two types of sites:</strong></p><ul><li><p>A special <a target="_blank" rel="noopener noreferrer nofollow" href="http://username.github.io">username.github.io</a> repo (your main site)</p></li><li><p>Or any individual repo (project sites like this one)</p></li></ul><p></p><ol><li><p>Next, head over to your Github repo you want to connect to your custom domain. You can use any repository for this. GitHub will serve your site from whichever repo you connect your domain to.</p></li><li><p>Go to the repo <strong>Settings</strong> tab on the far right.&nbsp;</p></li><li><p>Along the left sidebar, choose <strong>Pages</strong>.</p></li><li><p>In the text field for <strong>Custom Domain</strong>, enter <a target="_blank" rel="noopener noreferrer nofollow" href="http://yourdomain.com"><u>yourdomain.com</u></a> (replace this with your actual domain). Behind the scenes, GitHub creates a <code>CNAME</code> file.</p></li><li><p>Check the box next to <strong>Enforce HTTPS</strong>.</p></li><li><p>Make sure <strong>Source</strong> is set to <strong>Deploy from a branch</strong></p></li><li><p>For <strong>Branch</strong>, select <strong>main</strong></p></li><li><p><strong>Save</strong> settings</p></li></ol><p></p><p>Now all you have to do is wait for the DNS records to update, which can take <strong>up to 24 hours</strong>.</p><p></p><p>Once that happens, everything should be correctly synced up.</p><p><br>To test it, try visiting your domain by typing it into a browser and if it takes you to the site you created on Github, then you are all set. You can use the Github repo as your <strong>CMS</strong> going forward.</p><p></p><p><strong>If it doesn’t work right away:</strong></p><ul><li><p>DNS changes can take up to 24 hours</p></li><li><p>Try clearing your browser cache or checking in an incognito window</p></li></ul><p></p>
+    </article>
+  </main>
+  	    <!-- FOOTER -->
+    <footer class="nb-section">
+      <div class="nb-container">
+        <div class="nb-panel">
+          <div class="nb-row-between">
+            <div class="nb-stack-sm">
+              <span class="nb-label">Neo Brutal CSS</span>
+              <p class="nb-mb-0">
+                Built for loud interfaces, tactile buttons, and unapologetic UI.
+              </p>
+            </div>
+
+            <div class="nb-row">
+              <a href="https://github.com/monapdx/Github-Tools" class="nb-btn">GitHub</a>
+              <a href="#" class="nb-btn nb-btn-yellow">Docs</a>
+              <a href="#" class="nb-btn nb-btn-pink">Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
