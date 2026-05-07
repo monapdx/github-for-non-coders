@@ -9,11 +9,54 @@
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
+     <!-- NAV -->
+    <nav class="nb-nav">
+      <div class="nb-nav-inner">
+        <div class="nb-nav-group">
+          <div class="nb-logo-stack">
+            <div class="nb-logo-top">GITHUB FOR</div>
+            <div class="nb-logo-bottom">NON-CODERS</div>
+          </div>
+        </div>
+
+        <div class="nb-nav-group">
+          <a href="../index.html" class="nb-btn">Home</a>
+          <a href="#buttons" class="nb-btn">About</a>
+          <a href="blog/" class="nb-btn nb-btn-pink">Blog</a>
+
+          <a href="#alerts" class="nb-btn">Contact</a>
+        </div>
+      </div>
+    </nav>
   <main class="blog-post">
     <h1>Common Mistakes Non-Coders Make When Using Github</h1>
     <article>
       <p>Whether you’re using GitHub for non-code projects or building code projects with the help of AI, there are a few extremely common rookie mistakes that tend to show up early on. These mistakes don’t just affect how your repo functions—they directly impact how it’s perceived by others.</p><p></p><p>Some of these are minor, but a few can create real security risks and should be strictly avoided when uploading anything to GitHub.<br></p><p><strong>#1: Not including a .gitignore file.</strong> A .gitignore file tells GitHub which files and folders not to track. Without one, it’s very easy to accidentally upload things that don’t belong in your repo—like system files, dependencies, or local environment folders. This clutters your project, makes it harder to navigate, and can even expose sensitive data. Most projects should have a .gitignore from the very beginning, and you can usually generate one in seconds based on your tech stack.<br></p><p><strong>A .gitignore file is just a plain text file named exactly:</strong></p><p></p><p><strong>.gitignore</strong></p><p></p><p>No file name before the dot, and make sure it’s not saved as <strong>.gitignore.txt</strong>.<br></p><p>Inside it, you list files and folders Git should ignore.&nbsp;</p><p></p><p><strong>For example:</strong></p><p>node_modules/</p><p>dist/</p><p>build/</p><p>.env</p><p>.env.local</p><p>.venv/</p><p><strong>pycache</strong>/</p><p>.DS_Store</p><p><a target="_blank" rel="noopener noreferrer nofollow" href="http://thumbs.db"><u>Thumbs.db</u></a></p><p></p><p>You do not need to write a .gitignore from scratch. GitHub has built-in .gitignore templates, and there are also online generators where you can type in things like “Node,” “Python,” “Windows,” or “React” and get a starter file.&nbsp;</p><p></p><p>The main goal is to avoid uploading local junk, dependency folders, private config files, and machine-specific files that only matter on your own computer.</p><p></p><p>If your project uses Node, the big one is usually <strong>node_modules/</strong>. If your project uses Python, common ones include <strong>.venv/</strong>,<strong> pycache/</strong>, and sometimes <strong>*.pyc</strong>.&nbsp;</p><p></p><p>If your project uses <strong>API keys</strong> or private settings, <strong>.env</strong> should almost always be ignored.</p><p></p><p><strong>#2: Exposing secrets hard-coded into files. </strong>This is one of the few mistakes on this list that can cause real damage. API keys, tokens, passwords, and private URLs <strong><u>should never be committed to a public repo</u></strong>.&nbsp;</p><p></p><p>Once they’re pushed, they’re effectively exposed—even if you delete them later. Instead, use environment variables or config files that are excluded via<strong> .gitignore</strong>. If you’ve already exposed a secret, assume it’s compromised and rotate it immediately.<br></p><p><strong>#3: Running into merge conflict weirdness. </strong>Merge conflicts happen when Git can’t automatically figure out how to combine changes. For beginners, they can feel confusing and intimidating, especially when you see blocks of strange symbols in your files. The key thing to understand is that Git is asking you to choose which version (or combination of versions) should win. It’s not an error—it’s a decision point. Learning how to read and resolve conflicts early will save you a lot of frustration.</p><p></p><p><strong>This can happen in a very normal beginner workflow:</strong></p><p>For example, you might make a quick edit to your <a target="_blank" rel="noopener noreferrer nofollow" href="http://README.md">README.md</a> directly on GitHub’s website. Later, you open the same repo on your computer, edit the README in Notepad++, and then open GitHub Desktop.&nbsp;</p><p></p><p>From your perspective, it feels like you only edited one file. But from Git’s perspective, there are now two different versions of that file: one on GitHub and one on your computer.</p><p></p><p>This is why it is a good habit to “pull” changes in GitHub Desktop before editing files locally, especially if you recently changed something on GitHub’s website. Pulling updates your computer’s copy before you start making new edits.</p><p></p><p><strong>A simple rule:</strong></p><p></p><p><strong>Before editing locally:</strong></p><p>1. Open GitHub Desktop</p><p>2. Click Fetch origin</p><p>3. If it changes to Pull origin, click Pull origin</p><p>4. Then edit your files</p><p>5. Commit and push<br></p><p>GitHub Desktop saying there is a conflict <strong><u>does not</u></strong> mean you broke the project. It usually just means Git found two versions of the same file and needs you to choose how to combine them.<br></p><p>The confusing part is that GitHub the website and GitHub Desktop can feel like the same thing, but they are not automatically synced in real time.<br></p><p>Your local folder is its own copy. <a target="_blank" rel="noopener noreferrer nofollow" href="http://GitHub.com">GitHub.com</a> is the remote copy.&nbsp;<br></p><p>GitHub Desktop is the tool that helps move changes back and forth between them. When you edit in both places without pulling first, they can drift out of sync.<br></p><p><strong>#4: Not including a </strong><a target="_blank" rel="noopener noreferrer nofollow" href="http://README.md"><strong><u>README.md</u></strong></a><strong> file. </strong>Your README is the front door to your project. It’s the first thing people see, and often the only thing they read. Without it, your repo has no context—no explanation of what it does, why it exists, or how to use it. Even a simple README with a short description and basic instructions is infinitely better than nothing. A good README turns a random collection of files into something that feels intentional and usable.</p><p></p><p><strong>#5: Not adding any Topics. </strong>Topics help GitHub understand what your project is about, and they directly affect discoverability. When you don’t add topics, your repo is much less likely to show up in searches or be recommended alongside similar projects. Think of topics as tags or keywords—they help other people find what you’ve made. Adding a handful of relevant topics takes less than a minute and can make a big difference in visibility.</p><p></p><p><strong>#6: No license (or not understanding licensing at all)</strong></p><p></p><p><strong>Without a license:</strong></p><p>People don’t know if they can use your work<br></p><p>Some won’t touch it at all</p><p></p><p>By default, your code is technically “all rights reserved,” even if you didn’t intend that. Adding a simple license like <strong>MIT</strong> makes it clear that others can use and build on your work.</p><p></p><p><strong>#7: Messy or inconsistent file structure. </strong>A messy file structure makes a project feel harder to understand than it actually is.</p><p><br><strong>Things like:</strong></p><ul><li><p>Random files in root</p></li><li><p>Mixed naming styles (fileOne.js, file_two.js, file-final-final.js)</p></li><li><p>No separation of assets, code, docs</p></li></ul><p><br>Structure = clarity.</p><p><br><strong>#8: Not using Issues or Discussions at all. </strong>These are meant to be collaboration tools, but even if you’re the only person who will be working on or maintaining a repo, they can still be useful. For example, Issues can just be used to keep track of ideas you have for future changes or features you want added to a project down the road. Seeing 0 Issues on a repo is often a subtle red flag—it can signal that the creator isn’t really using GitHub as intended. Every project has issues. Nothing is ever perfect. So having at least a few is actually a strength signal, not a weakness.&nbsp;</p><p><br>Are there any rookie mistakes you remember making as a non-coder getting started with GitHub? I know I’ve been guilty of several (if not all) of the mistakes in this list—most of this is based on firsthand experience.</p><p><br>GitHub has a pretty steep learning curve for non-coders. It wasn’t originally built with us in mind, and that shows in a lot of the workflow and terminology.</p><p><br></p>
     </article>
   </main>
+  
+  	    <!-- FOOTER -->
+    <footer class="nb-section">
+      <div class="nb-container">
+        <div class="nb-panel">
+          <div class="nb-row-between">
+            <div class="nb-stack-sm">
+              <span class="nb-label">Neo Brutal CSS</span>
+              <p class="nb-mb-0">
+                Built for loud interfaces, tactile buttons, and unapologetic UI.
+              </p>
+            </div>
+
+            <div class="nb-row">
+              <a href="https://github.com/monapdx/Github-Tools" class="nb-btn">GitHub</a>
+              <a href="#" class="nb-btn nb-btn-yellow">Docs</a>
+              <a href="#" class="nb-btn nb-btn-pink">Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
 </body>
 </html>
