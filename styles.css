@@ -359,21 +359,87 @@ small {
   
 }
 
-main {background: var(--nb-surface);
+/* Blog post styling for CMS-generated plain HTML */
+
+.blog-post {
+  background: var(--nb-surface);
   border: var(--nb-border);
   box-shadow: var(--nb-shadow-lg);
   padding: var(--nb-space-8);
-  padding-block: var(--nb-space-12);
-  width: min(100% - 2rem, var(--nb-container));
-  margin-inline: auto;
-  margin-top: var(--nb-space-6);}
-.blog-post {margin-top: var(--nb-space-3); display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: var(--nb-border);
-  box-shadow: var(--nb-shadow-sm);
+  width: min(100% - 2rem, 900px);
+  margin: var(--nb-space-12) auto;
+  display: block;
+  text-transform: none;
+}
+
+.blog-post article {
+  display: grid;
+  gap: var(--nb-space-4);
+}
+
+.blog-post h1 {
+  margin-bottom: var(--nb-space-8);
+}
+
+.blog-post h2,
+.blog-post h3,
+.blog-post h4 {
+  margin-top: var(--nb-space-8);
+}
+
+.blog-post p {
+  max-width: 75ch;
+}
+
+.blog-post p:first-of-type {
+  font-size: var(--nb-text-xl);
+  max-width: 65ch;
+}
+
+.blog-post a {
   font-weight: 900;
-  text-transform: uppercase;}
+  border-bottom: 3px solid var(--nb-pink);
+}
+
+.blog-post a:hover {
+  background: var(--nb-pink);
+  color: var(--nb-white);
+}
+
+.blog-post strong {
+  color: var(--nb-text);
+  font-weight: 900;
+}
+
+.blog-post ul,
+.blog-post ol {
+  margin: 0 0 var(--nb-space-4);
+  padding-left: var(--nb-space-8);
+  color: var(--nb-text-soft);
+}
+
+.blog-post li {
+  margin-bottom: var(--nb-space-2);
+}
+
+.blog-post pre,
+.blog-post code {
+  font-family: Consolas, Monaco, monospace;
+}
+
+.blog-post pre {
+  background: var(--nb-white);
+  border: var(--nb-border);
+  box-shadow: var(--nb-shadow-md);
+  padding: var(--nb-space-5);
+  overflow-x: auto;
+}
+
+.blog-post code {
+  background: var(--nb-yellow);
+  padding: 0.1em 0.25em;
+  border: 2px solid var(--nb-black);
+}
 
 /* =========================================================
    8. LINKS
