@@ -356,7 +356,24 @@ small {
 .nb-btn-dark {
   background: var(--nb-black);
   color: var(--nb-white);
+  
 }
+
+main {background: var(--nb-surface);
+  border: var(--nb-border);
+  box-shadow: var(--nb-shadow-lg);
+  padding: var(--nb-space-8);
+  padding-block: var(--nb-space-12);
+  width: min(100% - 2rem, var(--nb-container));
+  margin-inline: auto;
+  margin-top: var(--nb-space-6);}
+.blog-post {margin-top: var(--nb-space-3); display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--nb-border);
+  box-shadow: var(--nb-shadow-sm);
+  font-weight: 900;
+  text-transform: uppercase;}
 
 /* =========================================================
    8. LINKS
