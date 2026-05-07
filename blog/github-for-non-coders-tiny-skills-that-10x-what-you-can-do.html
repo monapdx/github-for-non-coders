@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub for Non-Coders: Tiny Skills That 10x What You Can Do</title>
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+     <!-- NAV -->
+    <nav class="nb-nav">
+      <div class="nb-nav-inner">
+        <div class="nb-nav-group">
+          <div class="nb-logo-stack">
+            <div class="nb-logo-top">GITHUB FOR</div>
+            <div class="nb-logo-bottom">NON-CODERS</div>
+          </div>
+        </div>
+
+        <div class="nb-nav-group">
+          <a href="../index.html" class="nb-btn">Home</a>
+          <a href="#buttons" class="nb-btn">About</a>
+          <a href="blog/" class="nb-btn nb-btn-pink">Blog</a>
+
+          <a href="#alerts" class="nb-btn">Contact</a>
+        </div>
+      </div>
+    </nav>
+  <main class="blog-post">
+    <h1>GitHub for Non-Coders: Tiny Skills That 10x What You Can Do</h1>
+    <article>
+      <p>Most people think the barrier to using GitHub is learning to code.</p><p><br>It’s not.</p><p><br><strong>The real barrier is a handful of tiny, boring, “nobody ever explained this” skills that make the difference between:</strong></p><ul><li><p>bookmarking a repo and never touching it</p></li><li><p>actually running it and getting value out of it</p></li></ul><p><br>You don’t need to become a developer.</p><p></p><p>You just need to know how to run things.</p><p><br>This guide covers the smallest set of skills that will unlock a huge percentage of GitHub projects for you—fast.<br></p><p><strong>#1: Learn how to clone a repo</strong></p><p></p><p>This is straightforward and easy.</p><p><br>Download <strong>GitHub Desktop</strong> and log in. Once there, choose <strong>File → Clone repository</strong>.</p><p><br>In the popup that appears, click on the <strong>URL tab</strong> on the far right. Copy and paste the URL of the repo you want to clone and choose where you want to save it on your hard drive.</p><p><br>GitHub will download the repo as a folder on your computer, named after the repo.</p><p></p><p><strong>#2: Download Python and Node.js</strong></p><p></p><p>Go to <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>&nbsp;and download Python.</p><p><br>When installing, be sure to check the box next to <strong>“Add Python to PATH”</strong> so it will work from the command line.</p><p></p><p>Next, go to <a target="_blank" rel="noopener noreferrer nofollow" href="https://nodejs.org/en/download">https://nodejs.org/en/download</a>&nbsp;and download Node.js.</p><p></p><p>Done.</p><p></p><p><strong>For repos that include lots of other code packages, we will be using:</strong></p><ul><li><p>npm (Node Package Manager) for JavaScript</p></li><li><p>pip (Python’s package installer) for Python</p></li></ul><p><br><strong>The fastest way to know what to use</strong></p><p><br>If the repo you are working in contains a <strong>package.json</strong> file, you will be using <strong>npm</strong>.</p><p><br>If the repo contains <strong>requirements.txt</strong> instead, you will be using <strong>pip</strong>.</p><p></p><p>These files just list the extra code the project depends on.<br></p><p><strong>#3: Learn the most basic ways to use Command Prompt</strong></p><p><br>If you’re a <strong>Windows</strong> user, you have options. You can use Command Prompt, PowerShell, Git Bash, or others.</p><p><br>These are different shells, but most basic commands (like cd) work the same across them.</p><p><br>You can open Command Prompt by going to the <strong>Start</strong> menu and typing <strong>cmd</strong>. </p><p></p><p><strong>It will open a black window with a file path listed, like:</strong></p><p><strong>C:\Windows\System32&gt;</strong></p><p></p><p><strong>Move into your project folder</strong></p><p>Since you’ve already cloned a repo, go to where you saved it on your hard drive.</p><p></p><p>Right-click the folder and choose <strong>Copy as path</strong>.</p><p></p><p><strong>Return to Command Prompt and type:</strong></p><p><strong>cd "paste-your-path-here"</strong></p><p><br>Then hit Enter.</p><p><br>Now you are in the correct folder to run commands for that project.</p><p></p><p><strong>Running the project</strong></p><p>Now that you have Python and Node.js installed, you can run the repo based on what it uses.</p><p><br><strong>Look in the root folder for either:</strong></p><ul><li><p>package.json → use npm</p></li><li><p>requirements.txt → use pip</p></li><li><p>For npm (JavaScript projects)</p></li></ul><p></p><p><strong>These are the most common commands you’ll see:</strong></p><ul><li><p>npm install</p></li><li><p>npm run dev</p></li></ul><p></p><p>(Some projects also use npm run build, but not all.)</p><p><br><strong>Running npm run dev will usually give you a local URL like:</strong></p><p><a target="_blank" rel="noopener noreferrer nofollow" href="http://localhost:3000"><u>http://localhost:3000</u></a></p><p><br>Open that in your browser to see the project running on your computer.</p><p><br><strong>For pip (Python projects)</strong></p><p><br><strong>The main commands are:</strong></p><ul><li><p>pip install -r requirements.txt</p></li><li><p>python <a target="_blank" rel="noopener noreferrer nofollow" href="http://app.py">app.py</a></p></li><li><p></p></li></ul><p>(Replace <a target="_blank" rel="noopener noreferrer nofollow" href="http://app.py">app.py</a> with whatever file the project uses.)</p><p><br><strong>On some systems, you may need to use:</strong></p><p>python3 <a target="_blank" rel="noopener noreferrer nofollow" href="http://app.py">app.py</a></p><p></p><p><strong>What happens when you run it?</strong></p><ul><li><p>Some Python projects will print output directly in the terminal</p></li><li><p>Others will open a browser window (especially apps built with tools like Streamlit)</p></li></ul><p><br><strong>How to know what command to run</strong></p><p>Open the README file.</p><p></p><p><strong>Look for a section called:</strong></p><ul><li><p>“Installation”</p></li><li><p>“Getting Started”</p></li></ul><p></p><p><strong>Then:</strong></p><p>👉 Copy and paste the commands exactly</p><p></p><p>Don’t overthink it.</p><p></p><p><strong>This is the part nobody tells you:</strong></p><p>You don’t need to understand most of the code in a GitHub repo to use it.</p><p><br><strong>You just need to know how to:</strong></p><ul><li><p>get it onto your computer</p></li><li><p>install what it depends on</p></li><li><p>run the right command</p></li></ul><p></p><p>That’s it.</p><p><br>Once you have these basics down, GitHub stops being a wall of confusing files and starts becoming a library of tools you can actually use.</p><p><br>And the more you do this, the easier it gets—because most repos follow the same patterns over and over again.</p><p><br>You don’t need to become a programmer.</p><p><br>You just need to stop skipping this layer.</p><p><br><br></p>
+    </article>
+  </main>
+  	    <!-- FOOTER -->
+    <footer class="nb-section">
+      <div class="nb-container">
+        <div class="nb-panel">
+          <div class="nb-row-between">
+            <div class="nb-stack-sm">
+              <span class="nb-label">Neo Brutal CSS</span>
+              <p class="nb-mb-0">
+                Built for loud interfaces, tactile buttons, and unapologetic UI.
+              </p>
+            </div>
+
+            <div class="nb-row">
+              <a href="https://github.com/monapdx/Github-Tools" class="nb-btn">GitHub</a>
+              <a href="#" class="nb-btn nb-btn-yellow">Docs</a>
+              <a href="#" class="nb-btn nb-btn-pink">Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
