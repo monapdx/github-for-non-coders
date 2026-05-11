@@ -4,6 +4,7 @@
 
 > A GitHub Pages blog focused on helping everyday people use GitHub creatively — without needing to become traditional programmers.
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/O4O41XT7AO)
 ---
 
 ## About
