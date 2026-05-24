@@ -1,0 +1,83 @@
+name: Ask a GitHub Question
+description: Ask a question about GitHub or share something that confuses you.
+title: "[Question]: "
+labels:
+  - question
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Ask Anything
+
+        Stuck? Confused? Wondering why GitHub does something a certain way?
+
+        This repository is for people learning GitHub, so beginner questions are welcome.
+
+        If something doesn't make sense to you, there's a good chance it doesn't make sense to someone else either.
+
+  - type: dropdown
+    id: experience
+    attributes:
+      label: How experienced are you with GitHub?
+      options:
+        - Brand New
+        - Beginner
+        - Some Experience
+        - Intermediate
+        - Advanced
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: What is your question?
+      description: Tell us what you're trying to understand.
+      placeholder: |
+        Example:
+        What is the difference between cloning a repository and downloading a ZIP file?
+    validations:
+      required: true
+
+  - type: textarea
+    id: confusion
+    attributes:
+      label: What part is confusing?
+      description: Explain what doesn't make sense or where you got stuck.
+      placeholder: |
+        Example:
+        I understand downloading a ZIP file, but I don't understand why people say I need to clone the repository instead.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: What were you trying to do?
+      description: Describe the task or goal you were working on.
+      placeholder: |
+        Example:
+        I was trying to edit a project and publish it with GitHub Pages.
+
+  - type: textarea
+    id: resources
+    attributes:
+      label: What resources have you already looked at?
+      description: Links, videos, blog posts, documentation, or screenshots are helpful.
+      placeholder: |
+        Example:
+        - GitHub Docs article
+        - YouTube tutorial
+        - Blog post
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Anything else you'd like to share?
+      description: Optional notes, suggestions, frustrations, or feedback.
+
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Permission
+      options:
+        - label: You may use my question in future blog posts, videos, FAQs, or documentation (without sharing personal information).
+          required: false
