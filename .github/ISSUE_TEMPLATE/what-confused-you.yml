@@ -1,0 +1,39 @@
+name: Share a GitHub Confusion
+description: Tell us something about GitHub that confused you.
+title: "[Confusing]: "
+labels:
+  - beginner-feedback
+body:
+  - type: markdown
+    attributes:
+      value: |
+        What is something about GitHub that confused you?
+
+        It can be terminology, workflows, buttons, concepts, documentation, or anything else.
+
+        We collect these to improve learning materials for beginners.
+
+  - type: input
+    id: topic
+    attributes:
+      label: What confused you?
+      placeholder: GitHub Pages, Pull Requests, Forks, Branches, Tokens, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: explanation
+    attributes:
+      label: Describe the confusion
+      placeholder: |
+        What did you think it meant?
+        What actually happened?
+        Why was it difficult to understand?
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: What would have made it easier to understand?
+      placeholder: A screenshot, diagram, example, video, simpler wording, etc.
