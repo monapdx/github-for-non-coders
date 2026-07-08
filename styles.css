@@ -282,6 +282,8 @@ small {
   background: #03ff2d;
 }
 
+.nb-tag:hover {background:#fc86f3;}
+
 .nb-chip-row {
   display: flex;
   flex-wrap: wrap;
